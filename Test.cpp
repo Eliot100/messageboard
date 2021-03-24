@@ -51,5 +51,12 @@ TEST_CASE("Tests") {
     CHECK_THROWS(board.post(7,-1,Direction::Vertical,"ujs"));
     CHECK_THROWS(board.post(-3,2,Direction::Vertical,"unej"));
     CHECK_THROWS(board.post(-6,-6,Direction::Vertical,"ehric"));
+	
+	CHECK_THROWS(board.read(-1,0,Direction::Horizontal,2));
+    CHECK_THROWS(board.read(2,-5,Direction::Horizontal,3));
+    CHECK_THROWS(board.read(-2,-6,Direction::Horizontal,4));
+	CHECK_THROWS(board.read(-5,7,Direction::Vertical,1));
+    CHECK_THROWS(board.read(4,-2,Direction::Vertical,3));
+    CHECK_THROWS(board.read(-4,-3,Direction::Vertical,5));
 
 }
