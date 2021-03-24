@@ -58,5 +58,6 @@ TEST_CASE("Tests") {
 	CHECK_THROWS(board.read(-5,7,Direction::Vertical,1));
     CHECK_THROWS(board.read(4,-2,Direction::Vertical,3));
     CHECK_THROWS(board.read(-4,-3,Direction::Vertical,5));
-
+	
+	CHECK_NOTHROW(board.show());
 }
